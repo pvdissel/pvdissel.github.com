@@ -8,6 +8,7 @@ published: true
 ---
 Today I completed the second evening of the free Groovy course at [@InterAccess](https://twitter.com/interaccess) given by [@Frans_van_Buul](https://twitter.com/Frans_van_Buul), very interesting to see how Groovy works with in combination with Java code. But I want to use Groovy scripts as replacements for Bash/Batch scripts, the only thing I couldn't find out until now, was how to work with multiple groovy files when using groovy in its scripting context. Finally found it and it couldn't be easier!
 
+main.groovy:
 {% highlight groovy linenos=table %}
 #!/usr/bin/env groovy
 def sayer = new GhelloSayer()
@@ -15,6 +16,7 @@ println sayer.sayGHello()
 println new Utils().gotTools()
 {% endhighlight %}
 
+GhelloSayer.groovy:
 {% highlight groovy linenos=table %}
 class GhelloSayer {
     def sayGHello() {
@@ -23,6 +25,7 @@ class GhelloSayer {
 }
 {% endhighlight %}
 
+Utils.groovy:
 {% highlight groovy linenos=table %}
 def gotTools() {
     return 'Yes I haz'
