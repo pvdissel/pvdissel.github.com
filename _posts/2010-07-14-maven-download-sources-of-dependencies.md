@@ -5,12 +5,8 @@ tags:
 - Hints
 - maven
 - Technical
-status: publish
-type: post
 published: true
-meta:
-  _wp_old_slug: ''
 ---
 With the following Maven command you can download all compiled and sources of dependencies of your Maven project:
 
-<code>mvn dependency:sources</code>
+`mvn dependency:sources`
