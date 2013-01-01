@@ -1,0 +1,20 @@
+---
+layout: page
+title: Gettext API
+tags: []
+status: publish
+type: page
+published: true
+meta:
+  _wp_page_template: default
+---
+<em>Gettext library for in-code parsing of files for translations and generating translation files or writing/reading from a custom datasource.</em>
+
+The aim is to make an API that makes the complete functionality of the original <a href="http://www.gnu.org/software/gettext/">Gettext toolset</a> available in-code. As currently the Gettext toolset is only available as a bunch of executables, but if you want to make use of Gettext in a web-application project you probably want to do everything on-the-fly without having to use platform specific executables.
+
+Ofcourse there are already libraries to make use of the Gettext PO/MO files for different languages, eg. <a href="http://php.net/gettext">PHP Gettext methods</a>, <a href="http://framework.zend.com/manual/en/zend.translate.adapter.html">PHP Zend Frameworks Zend_Translate Gettext adapter</a>, and others... The Gettext toolset <a href="http://www.gnu.org/software/gettext/manual/gettext.html#List-of-Programming-Languages">even provides implementations of it's own or explains what implementation exists</a>. But note that these implementations still need the Gettext toolset to gather all translation keys and create PO/MO or language specific formats before the translations can be used.
+
+The aim of this API is to be 100% compatible with the original Gettext toolset, but providing all functionality in-code, starting with a Java-based API.
+
+Code available on GitHub: <a href="https://github.com/pvdissel/gettext-api">https://github.com/pvdissel/gettext-api</a>
+Progress available on Pivotaltracker: <a href="https://www.pivotaltracker.com/projects/226115">https://www.pivotaltracker.com/projects/226115</a>

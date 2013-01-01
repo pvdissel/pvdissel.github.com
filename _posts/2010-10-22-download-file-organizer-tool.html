@@ -1,0 +1,57 @@
+---
+layout: post
+title: (Download) File Organizer Tool
+tags:
+- idea
+- software
+- Technical
+- tool
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+---
+<p style="padding-left: 30px;"><strong>Update 2011-05-28:</strong>
+Looks like someone else already did a very good job creating something like the (Download) File Organizer Tool. It's called "Sick Beard" and does a bit more on some parts and a bit less on other parts.</p>
+<p style="padding-left: 30px;">Checkout <a href="http://sickbeard.com">http://sickbeard.com</a></p>
+<p style="padding-left: 30px;">You can use it standalone or in combination with <a href="http://sabnzbd.org/">SABnzbd+</a> (they both share a look-and-feel so even that is a plus.</p>
+<span style="color: #ff0000;"><strong>So the "(Download) File Organizer Tool" project is now cancelled
+(was it even started ;))</strong></span>
+
+My NAS download discs are getting full so I tried some disc cleaning. As I've automated my downloads I often download multiple versions of files (eg. tv series in different formats), so while cleaning out those duplicated files...{insert very boring process}... I thought of a great tool that could handle all this for me.
+<blockquote>/me programmer == /me lazy == /me wants to automate as much as possible</blockquote>
+I got the idea of a "(Download) File Organizer Tool", a tool that will do everything you want with your files automatically, LOL. A bit much, so I cramped it to:
+<ul>
+	<li>Define one or more directories to work on (incl. setting like recursive or not, how deep to go recursive, specifically including or excluding directories and/or files)</li>
+	<li>Define actions to handle, where an action can be something like:
+<ul>
+	<li>(for tv-series)
+On directory ... find all files that loosely have the same filename. Order them by mkv,x264,hdtv,avi. Remove the duplicates and keep top ordered file. Delete all files that don't match one of the order keywords. Move all files into a directory structure based on pattern ... (eg. {title}/season {season#}/{title}.s{season#}e{episode#}.{extension}). When unsure what to do, add file to "problem files"-list for manual fixing (and improving action for the next run).</li>
+</ul>
+</li>
+	<li>When creating the action, it should be possible to dry-run it and see the result of what it would look like if it was executed for real</li>
+	<li>It should be possible to run all or specific actions at specific times, intervals or be trigger by an external tool (eg. cron job, SABnzbd+, ...)</li>
+</ul>
+It looks to me that all this can be handled with basic *nix commands, but maybe <a href="http://groovy.codehaus.org/">Groovy</a> will be a better fit because of it's cross-platformness.
+
+The steps to take should be easy (for the above mentioned action):
+<ol>
+	<li>Define base directory to work on</li>
+	<li>Get list of all files (full paths) in directory (recursively)</li>
+	<li>Find duplicated filenames (case-insensitive, loosely/fuzzy compare)</li>
+	<li>Order group of duplicated filenames by the given order of keywords</li>
+	<li>Remove all files except the first/top one</li>
+	<li>Recognize tv serie title, season, episode and extention</li>
+	<li>If not exists, create directory structure based on found params</li>
+	<li>Move and rename file to new directory structure</li>
+	<li>Show list of files that were not processed at the end of the process as "problem files"</li>
+</ol>
+<blockquote>/me happy with the idea, now trying to find some time to build it</blockquote>
+I've started a public project on GitHub: <a title="(Download) File Organizer Tool" href="http://github.com/pvdissel/dfot">http://github.com/pvdissel/dfot</a>
+And a Pivotaltracker project: <a href="http://www.pivotaltracker.com/projects/132698">http://www.pivotaltracker.com/projects/132698</a>
+
+Update (2010-10-29 @21:00) : After another major HD cleanup to get some free space. I also came to the conclusion that, to get a filtering algorithm to be able to work correctly with all kind of situations, I probably has to put weights to keywords. eg. the higher the order of a keyword, the higher is score. " hdtv" and "x264"  always +10 as we want High Definition content when available. "pdtv" -10. etc.
+
+Also some keywords should be automaticly be recorgnized to be names of release groups, but only when they are on specific locations in the filename. Because the title of a tv serie could be the same as a release group, but release groups are mostly placed at the front or somewhere at the end of the filename.

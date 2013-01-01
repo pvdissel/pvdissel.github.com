@@ -1,0 +1,77 @@
+---
+layout: post
+title: Groovy scripting using multiple files
+tags:
+- groovy
+- Technical
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _simple_gist: ! "a:3:{i:2699495;a:3:{s:2:\"id\";s:7:\"2699495\";s:11:\"description\";s:11:\"main.groovy\";s:6:\"syntax\";s:1556:\"<div
+    class=\"gistem\"><div id=\"gist-2699495\" class=\"gist\">\n\n        <div class=\"gist-file\">\n
+    \         <div class=\"gist-data gist-syntax\">\n              <div class=\"highlight\"><pre><div
+    class='line' id='LC1'><span class=\"err\">#</span><span class=\"o\">!</span><span
+    class=\"s\">/usr/</span><span class=\"n\">bin</span><span class=\"o\">/</span><span
+    class=\"n\">env</span> <span class=\"n\">groovy</span></div><div class='line'
+    id='LC2'><span class=\"kt\">def</span> <span class=\"n\">sayer</span> <span class=\"o\">=</span>
+    <span class=\"k\">new</span> <span class=\"n\">GhelloSayer</span><span class=\"o\">()</span></div><div
+    class='line' id='LC3'><span class=\"n\">println</span> <span class=\"n\">sayer</span><span
+    class=\"o\">.</span><span class=\"na\">sayGHello</span><span class=\"o\">()</span></div><div
+    class='line' id='LC4'><span class=\"n\">println</span> <span class=\"k\">new</span>
+    <span class=\"nf\">Utils</span><span class=\"o\">().</span><span class=\"na\">gotTools</span><span
+    class=\"o\">()</span></div></pre></div>\n          </div>\n\n          <div class=\"gist-meta\">\n
+    \           <a href=\"https://gist.github.com/raw/2699495/0dfa442f1918ad3006acded2fe16231148d7c35f/file1.groovy\"
+    style=\"float:right;\">view raw</a>\n            <a href=\"https://gist.github.com/2699495#file_file1.groovy\"
+    style=\"float:right;margin-right:10px;color:#666\">file1.groovy</a>\n            <a
+    href=\"https://gist.github.com/2699495\">This Gist</a> is brought to you using
+    <a href=\"http://en.bainternet.info/2011/simple-gist-embed\"><small>Simple Gist
+    Embed</small></a>.\n          </div>\n        </div>\n</div>\n</div>\";}i:2699502;a:3:{s:2:\"id\";s:7:\"2699502\";s:11:\"description\";s:18:\"GhelloSayer.groovy\";s:6:\"syntax\";s:1342:\"<div
+    class=\"gistem\"><div id=\"gist-2699502\" class=\"gist\">\n\n        <div class=\"gist-file\">\n
+    \         <div class=\"gist-data gist-syntax\">\n              <div class=\"highlight\"><pre><div
+    class='line' id='LC1'><span class=\"kd\">class</span> <span class=\"nc\">GhelloSayer</span>
+    <span class=\"o\">{</span></div><div class='line' id='LC2'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+    class=\"kt\">def</span> <span class=\"nf\">sayGHello</span><span class=\"o\">()</span>
+    <span class=\"o\">{</span></div><div class='line' id='LC3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+    class=\"k\">return</span> <span class=\"s1\">&#39;Ghello!&#39;</span></div><div
+    class='line' id='LC4'>&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"o\">}</span></div><div
+    class='line' id='LC5'><span class=\"o\">}</span></div></pre></div>\n          </div>\n\n
+    \         <div class=\"gist-meta\">\n            <a href=\"https://gist.github.com/raw/2699502/ca80a151edb3af662cc534ad0ecb2a193cc6939d/file1.groovy\"
+    style=\"float:right;\">view raw</a>\n            <a href=\"https://gist.github.com/2699502#file_file1.groovy\"
+    style=\"float:right;margin-right:10px;color:#666\">file1.groovy</a>\n            <a
+    href=\"https://gist.github.com/2699502\">This Gist</a> is brought to you using
+    <a href=\"http://en.bainternet.info/2011/simple-gist-embed\"><small>Simple Gist
+    Embed</small></a>.\n          </div>\n        </div>\n</div>\n</div>\";}i:2699507;a:3:{s:2:\"id\";s:7:\"2699507\";s:11:\"description\";s:12:\"Utils.groovy\";s:6:\"syntax\";s:1091:\"<div
+    class=\"gistem\"><div id=\"gist-2699507\" class=\"gist\">\n\n        <div class=\"gist-file\">\n
+    \         <div class=\"gist-data gist-syntax\">\n              <div class=\"highlight\"><pre><div
+    class='line' id='LC1'><span class=\"kt\">def</span> <span class=\"nf\">gotTools</span><span
+    class=\"o\">()</span> <span class=\"o\">{</span></div><div class='line' id='LC2'>&nbsp;&nbsp;&nbsp;&nbsp;<span
+    class=\"k\">return</span> <span class=\"s1\">&#39;Yes I haz&#39;</span></div><div
+    class='line' id='LC3'><span class=\"o\">}</span></div></pre></div>\n          </div>\n\n
+    \         <div class=\"gist-meta\">\n            <a href=\"https://gist.github.com/raw/2699507/1d27de76ef71d92965137e3f1d70287b27739823/file1.groovy\"
+    style=\"float:right;\">view raw</a>\n            <a href=\"https://gist.github.com/2699507#file_file1.groovy\"
+    style=\"float:right;margin-right:10px;color:#666\">file1.groovy</a>\n            <a
+    href=\"https://gist.github.com/2699507\">This Gist</a> is brought to you using
+    <a href=\"http://en.bainternet.info/2011/simple-gist-embed\"><small>Simple Gist
+    Embed</small></a>.\n          </div>\n        </div>\n</div>\n</div>\";}}"
+---
+Today I completed the second evening of the free Groovy course at <a title="@InterAccess" href="https://twitter.com/interaccess">@InterAccess</a> given by <a title="@Frans_van_Buul" href="https://twitter.com/Frans_van_Buul">@Frans_van_Buul</a> , very interesting to see how Groovy works with in combination with Java code. But I want to use Groovy scripts as replacements for Bash/Batch scripts, the only thing I couldn't find out until now, was how to work with multiple groovy files when using groovy in its scripting context. Finally found it and it couldn't be easier!
+
+[gist id="2699495"]
+
+[gist id="2699502"]
+
+[gist id="2699507"]
+
+If you look at these three groovy files, it's very easy to see what Groovy does:
+<ul>
+	<li>See if a .groovy file exists equal to the classname you want to instanciate, if so, it loads it</li>
+	<li>Non-main groovy scripts should have filenames that always start with a capital first-character, as if it's a Java class source file. This way groovy will put the file in the classpath somehow and the file is loadable as if the filename is the classname and the groovy file content is the content of that class.</li>
+	<li>This also works with packages, packages just start from the directory of the main script.</li>
+</ul>
+Magic@work, but this finally makes it possible for me to really replace Bash/Batch scripts with Groovy.
+
+Btw. main.groovy can ofcourse be named anything you like!
+
+/me happy
